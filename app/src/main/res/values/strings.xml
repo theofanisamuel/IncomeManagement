@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Wealth Management App</string>
+    <string name="one_day">FOR 1 DAY</string>
+    <string name="one_week">FOR 1 WEEK</string>
+    <string name="one_month">FOR 1 MONTH</string>
+    <string name="help">This app will help you to manage your monthly income to achieve a successful life in the future.\n\nInput your salary, tap the SUBMIT button, and you will see the allocation divisions of your monthly income.\nYou can choose three options to see the maximum allocation per MONTH, per WEEK, or per DAY.\n\nIt\'s inspired from the concept of wealth management created by Li Ka Shing, the richest man in Asia. He teaches us how to separate our income into FIVE different allocations:\nDAILY NEEDS, SOCIAL LIFE, LEARN and STUDY, LEISURE and TRAVEL, INVESTMENT and SAVINGS
+    </string>
+    <string name="daily">Strict budgeting plays an important role in this. Eat simply. Prioritize your needs and lessen your wants. If you can, you can also downsize your needs.</string>
+    <string name="social">Network yourself with people who are more knowledgeable, richer or people who have helped you in your career. Do a favor for them once in a while like treating them in lunch or dinner or work for them for free.</string>
+    <string name="study">Set aside also to improve yourself by buying and reading books and attending seminars. Aside from improving your skills, meeting people in these seminars are also part of the investment.</string>
+    <string name="leisure">Set aside 10% for travel at least once a year. Traveling need not to be expensive. Stay in simple hotels or dorm-type hostels to save costs. Use those experiences to recharge yourself so that you’ll continually have passion in your work.</string>
+    <string name="invest">Use it for investments like mutual funds, UITFs, bonds, stock market, real estate, etc. Remember that as you earn more, invest more so that you will not run out of money and quality of life will not drastically go down.</string>
+
+
+</resources>

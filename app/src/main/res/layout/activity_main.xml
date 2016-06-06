@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.tsl.android.incomemanagement.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right">
+
+        <ImageButton
+            android:id="@+id/aboutIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/white"
+            android:onClick="onAbout"
+            android:src="@drawable/about" />
+
+        <ImageButton
+            android:id="@+id/helpIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/aboutIcon"
+            android:background="@android:color/white"
+            android:onClick="onHelp"
+            android:src="@drawable/help" />
+    </RelativeLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.tsl.android.incomemanagement.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:orientation="horizontal">
+
+
+
+                <EditText
+                    android:id="@+id/etSalary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:inputType="number"
+                    android:hint="Input salary"
+                    />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:background="#FF5840"
+                    android:onClick="buttonEnter"
+                    android:text="submit"
+                    android:textColor="#FFFFFF"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Your monthly salary"
+                    android:textAlignment="center"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/tvSalary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Rp. 0,-"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_orange_light"
+                        android:onClick="onClickYear"
+                        android:text="1 MONTH" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_orange_dark"
+                        android:onClick="onClickWeek"
+                        android:text="1 WEEK" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/holo_red_light"
+                        android:onClick="onClickDay"
+                        android:text="1 DAY" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2px"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="recommended max. allocation"
+                        android:textAlignment="center"
+                        android:textAllCaps="true" />
+
+                    <TextView
+                        android:id="@+id/dayWeekMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_margin="8dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fadeScrollbars="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/dailyIcon"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_margin="4dp"
+                                    android:src="@drawable/dailyshopping" />
+
+                                <TextView
+                                    android:id="@+id/daily_needs"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@id/dailyIcon"
+                                    android:text="Daily Needs" />
+
+                                <TextView
+                                    android:id="@+id/tvDaily"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/daily_needs"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_toRightOf="@id/dailyIcon"
+                                    android:text="Rp. 0,-"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/socialIcon"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_margin="4dp"
+                                    android:src="@drawable/sociallife" />
+
+                                <TextView
+                                    android:id="@+id/social_life"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@id/socialIcon"
+                                    android:text="Social Life" />
+
+                                <TextView
+                                    android:id="@+id/tvSocial"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/social_life"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_toRightOf="@id/socialIcon"
+                                    android:text="Rp. 0,-"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18sp" />
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/learnIcon"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_margin="4dp"
+                                    android:src="@drawable/learnstudy" />
+
+                                <TextView
+                                    android:id="@+id/learn_study"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@id/learnIcon"
+                                    android:text="Learn and Study" />
+
+                                <TextView
+                                    android:id="@+id/tvStudy"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/learn_study"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_toRightOf="@id/learnIcon"
+                                    android:text="Rp. 0,-"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/leisureIcon"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_margin="4dp"
+                                    android:src="@drawable/leisuretravel" />
+
+                                <TextView
+                                    android:id="@+id/leisure_travel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@id/leisureIcon"
+                                    android:text="Leisure and Travel" />
+
+                                <TextView
+                                    android:id="@+id/tvLeisure"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/leisure_travel"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_toRightOf="@id/leisureIcon"
+                                    android:text="Rp. 0,-"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/investIcon"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_margin="4dp"
+                                    android:src="@drawable/investment" />
+
+                                <TextView
+                                    android:id="@+id/invest_saving"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@id/investIcon"
+                                    android:text="Investment/Savings" />
+
+                                <TextView
+                                    android:id="@+id/tvInvest"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/invest_saving"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_toRightOf="@id/investIcon"
+                                    android:gravity="center_vertical"
+                                    android:text="Rp. 0,-"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18sp" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
